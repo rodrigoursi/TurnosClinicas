@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsTurnero_Clinica
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStripPrincipal = new System.Windows.Forms.MenuStrip();
+            this.usuariosToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.turnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripPrincipal.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStripPrincipal
+            // 
+            this.menuStripPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStrip,
+            this.turnosToolStripMenuItem,
+            this.configuracionToolStripMenuItem});
+            this.menuStripPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuStripPrincipal.Name = "menuStripPrincipal";
+            this.menuStripPrincipal.Size = new System.Drawing.Size(800, 24);
+            this.menuStripPrincipal.TabIndex = 1;
+            this.menuStripPrincipal.Text = "menuStrip1";
+            // 
+            // usuariosToolStrip
+            // 
+            this.usuariosToolStrip.Name = "usuariosToolStrip";
+            this.usuariosToolStrip.Size = new System.Drawing.Size(64, 20);
+            this.usuariosToolStrip.Text = "Usuarios";
+            // 
+            // turnosToolStripMenuItem
+            // 
+            this.turnosToolStripMenuItem.Name = "turnosToolStripMenuItem";
+            this.turnosToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.turnosToolStripMenuItem.Text = "Turnos";
+            // 
+            // configuracionToolStripMenuItem
+            // 
+            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
+            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuracionToolStripMenuItem.Text = "Configuracion";
+            // 
+            // Principal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.menuStripPrincipal);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStripPrincipal;
+            this.Name = "Principal";
+            this.Text = "PANTALLA PRINCIPAL";
+            this.Load += new System.EventHandler(this.Principal_Load);
+            this.menuStripPrincipal.ResumeLayout(false);
+            this.menuStripPrincipal.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStripPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem turnosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
     }
 }
 
